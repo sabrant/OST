@@ -496,6 +496,10 @@ implements RestrictedAccess, Threadable {
     function getDueDate() {
         return $this->duedate;
     }
+    
+    function getFollowUpDate() {
+        return $this->follow_up_date;
+    }
 
     function getSLADueDate() {
         if ($sla = $this->getSLA()) {
@@ -1880,6 +1884,10 @@ implements RestrictedAccess, Threadable {
          case 'due_date':
             if ($due = $this->getEstDueDate())
                 return new FormattedDate($due);
+            break;
+        case 'follow_up_date'
+            if ($follow_up_date = $this->getFollowUpDate())
+                return new FormattedDate($follow_up_date)
             break;
         case 'close_date':
             if ($this->isClosed())
