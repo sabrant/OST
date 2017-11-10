@@ -434,7 +434,7 @@ if($ticket->isOverdue())
                     <td><?php echo Format::datetime($ticket->getEstDueDate()); ?></td>
                 </tr>
                 <tr>
-                  <th><?php echo __('Follow Up Date');?>:</th>
+                  <th><?php echo __('Follow Up Date');?>:</th> 
                   <td><?php echo Format::datetime($ticket->getFollowUpDate()); ?></td>
                 </tr>
                 <?php
